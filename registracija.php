@@ -27,7 +27,7 @@ session_start();
                 <div class="menu">
                     <ul>
                         <li class="naslovna"><a href="naslovna.php">Početna</a></li>
-                        <li class="usluge"><a href="">Usluge</a></li>
+                        <li class="usluge"><a href="">Novosti</a></li>
                         <li class="simptomi"><a href="simptomi.php">Simptomi</a></li>
                         <li class="osoblje"><a href="">Osoblje</a></li>
                         <li class="contact"><a href="">Kontak</a></li>

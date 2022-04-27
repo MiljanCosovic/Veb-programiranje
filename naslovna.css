@@ -1,0 +1,351 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(247, 239, 239);
+}
+#hamburger{
+    padding-right: 15px;
+    display: none;
+    
+}
+#check{
+    display: none;
+}
+.navbar{
+    height: 90px;
+    width: 100%;
+    background-color: rgb(247, 239, 239);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 50px 0 50px ;
+    box-shadow: 2px 10px 50px gray ;
+    position: fixed;
+    z-index: 5;
+    margin-top: -71px;
+}
+.logo-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 45px;
+}
+.container{padding-top: 71px;}
+.menu{
+    display: flex;
+    align-items: center;
+}
+.menu ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.menu ul li{
+    margin-right: 20px;
+    list-style-type: none;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+.menu ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+#naslovna a{
+    background-color: #74737A;
+    color: white;
+    border-radius: 20px;
+}
+
+.naslovna a:hover{
+    background-color: #74737A;
+    color: white;
+    border-radius: 20px;
+    transition: 0.2s;
+
+}
+#active a{
+    background-color: #74737A;
+    color: white;
+    border-radius: 20px;
+}
+.naslovna a{
+    padding: 10px;
+}
+.usluge a:hover{
+    background-color: #74737A;
+    color: white;
+    border-radius: 20px;
+    transition: 0.2s;
+
+}
+.usluge a{
+    padding: 10px;
+}
+.simptomi a:hover{
+    background-color: #74737A;
+    color: white;
+    border-radius: 20px;
+    transition: 0.2s;
+
+}
+.simptomi a{
+    padding: 10px;
+}
+.osoblje a:hover{
+    background-color:#74737A;
+    color: white;
+    border-radius: 20px;
+    transition: 0.2s;
+
+}
+.osoblje a{
+    padding: 10px;
+}
+.contact a:hover{
+    background-color: #74737A;
+    color: white;
+    border-radius: 20px;
+    transition: 0.2s;
+
+}
+.contact     a{
+    padding: 10px;
+}
+.prijavaa a:hover{
+    background-color: #74737A;
+    color: white;
+    border-radius: 20px;
+    transition: 0.2s;
+
+}
+.prijavaa     a{
+    padding: 10px;
+}
+.logo-image{
+    height: 100%;
+}
+.logo{
+    height: 100% !important;
+    padding: 10px;
+}
+.mySlides {
+    display: none;
+}
+img {
+    height: 80vh !important;
+}
+.slideshow-container {
+    width: 100%;
+    background-color: #ececec;
+}
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active {
+  background-color: #717171;
+}
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+.main{
+    display: flex;
+    align-items: center;
+    flex-direction: column !important;
+    width: 100%;
+    height: auto;
+    background-color: #ececec;
+    padding-bottom: 30px;
+}
+.tekst{
+    margin: 60px;
+    width: 80%;
+    height: 500px;
+    background-color: #ececec;
+    display: flex;
+}
+.slika{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+.slika img{
+    width: 80%;
+    height: 100% !important;
+}
+.slika2{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 50%;
+}
+.slika2 img{
+    height: 100% !important;
+    width: 80%;
+}
+.tekst1{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.tekst1 h1{
+    margin: 30px 0 0 15px;
+    font-size: 35px;
+    color: #353c4a;
+}
+.tekst1 p{
+    margin: 30px 0 0 15px;
+    font-size: 25px;
+    color: #353c4a;
+    line-height: 1.5rem;
+    font-family: serif;
+}
+
+
+.wrapper{
+    margin-top: 40px;
+}
+.wrapper a{
+    margin-top: 10px;
+    display: block;
+    width: 250px;
+    height: 44px;
+    line-height: 40px;
+    font-size: 18px !important;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    border: none;
+    background-color:#318CCA;
+    letter-spacing: 2px;
+    text-align: center;
+    position: relative;
+    transition: all .35s;
+    margin-left: 15px;
+    font-size: 14px;
+  }
+  
+  .wrapper a span{
+    position: relative;
+    z-index: 2;
+  }
+  
+  .wrapper  a:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgb(133, 132, 132);
+    border:none;
+    transition: all .35s;
+  }
+  
+  .wrapper a:hover{
+    color: black;
+  }
+  
+  .wrapper a:hover:after{
+    width: 100%;
+  }
+
+
+
+
+
+.footer{
+    width: 100%;
+    height: 300px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #1f242d;
+}
+.medi{
+    padding-top: 40px;
+    height: 200px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+}
+.medi a{
+    color: white;
+    font-size: 20px;
+}
+
+.nav{
+    padding-top: 40px;
+    height: 200px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+}
+.nav a{
+    color: white;
+    font-size: 20px;
+}
+
+.radno{
+    padding-top: 40px;
+    height: 200px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 15px;
+}
+.radno a{
+    color: white;
+    font-size: 20px;
+}
+
+
+
+
+.footer2{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #bbb;
+}
+.footer2 p{
+    font-size: 17px;
+}

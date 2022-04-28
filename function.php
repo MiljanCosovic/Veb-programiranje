@@ -138,16 +138,8 @@ function loginUser($conn,$usernameeee,$lozinka){
         $_SESSION["userN"] = $zauzetUsern["usern"];
         $_SESSION["TipU"] = $zauzetUsern["tip"];
 
-        if($_SESSION["TipU"] == "pacijent")
-        {
-
-            header("location: naslovna.php");
-        }
-        if($_SESSION["TipU"] == "lekar")
-        {
-
-            header("location: simptomi.php");
-        }
+        
+        header("location: naslovna.php");
         exit(); 
     }
 }

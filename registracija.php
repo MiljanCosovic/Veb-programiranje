@@ -33,11 +33,24 @@ session_start();
                         <li class="contact"><a href="">Kontak</a></li>
 
                         <?php
-                        if (isset($_SESSION["userN"])) {
-                            echo "<li class='prijavaa'><a href='profile.php'>Profil</a></li>";
+                        if (isset($_SESSION["userN"]) && ($_SESSION["TipU"]) == "lekar") {
+                            echo "<li class='prijavaa'><a href='profile.php'>ProfilLekar</a></li>";
                             echo "<li class='prijavaa'><a href='logout.php'>Log Out</a></li>";
                             
-                        } else {
+                        }
+                        else if (isset($_SESSION["userN"]) && ($_SESSION["TipU"]) == "admin") {
+                            echo "<li class='prijavaa'><a href='profile.php'>ProfilAdmin</a></li>";
+                            echo "<li class='prijavaa'><a href='logout.php'>Log Out</a></li>";
+                            
+                        }
+
+                       else if (isset($_SESSION["userN"]) && ($_SESSION["TipU"]) == "pacijent") {
+                            echo "<li class='prijavaa'><a href='profile.php'>ProfilPacinent</a></li>";
+                            echo "<li class='prijavaa'><a href='logout.php'>Log Out</a></li>";
+                            
+                        }
+                        
+                        else {
                             echo "<li class='prijavaa'><a href='login.php'>Prijavi se</a></li>";
                         }
 
@@ -56,7 +69,7 @@ session_start();
             <div class="registration">
                 <h1>Registruj se</h1>
 
-                
+
 
                 <form action="init.php" method="POST">
                     <div class="Ime2">

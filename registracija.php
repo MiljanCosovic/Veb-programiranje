@@ -30,7 +30,7 @@ session_start();
                         <li class="usluge"><a href="">Novosti</a></li>
                         <li class="simptomi"><a href="simptomi.php">Simptomi</a></li>
                         <li class="osoblje"><a href="">Osoblje</a></li>
-                        <li class="contact"><a href="">Kontak</a></li>
+                        <li class="contact"><a href="kontakt.php">Kontak</a></li>
 
                         <?php
                         if (isset($_SESSION["userN"]) && ($_SESSION["TipU"]) == "lekar") {

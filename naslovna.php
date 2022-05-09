@@ -36,18 +36,18 @@
                         
                         <?php
                         if (isset($_SESSION["userN"]) && ($_SESSION["TipU"]) == "lekar") {
-                            echo "<li class='prijavaa'><a href='profile.php'>ProfilLekar</a></li>";
+                            echo "<li class='prijavaa'><a href='profilLekar.php'>ProfilLekar</a></li>";
                             echo "<li class='prijavaa'><a href='logout.php'>Log Out</a></li>";
                             
                         }
                         else if (isset($_SESSION["userN"]) && ($_SESSION["TipU"]) == "admin") {
-                            echo "<li class='prijavaa'><a href='profile.php'>ProfilAdmin</a></li>";
+                            echo "<li class='prijavaa'><a href='profilAdmin.php'>ProfilAdmin</a></li>";
                             echo "<li class='prijavaa'><a href='logout.php'>Log Out</a></li>";
                             
                         }
 
                        else if (isset($_SESSION["userN"]) && ($_SESSION["TipU"]) == "pacijent") {
-                            echo "<li class='prijavaa'><a href='profile.php'>ProfilPacinent</a></li>";
+                            echo "<li class='prijavaa'><a href='profilPacijent.php'>ProfilPacinent</a></li>";
                             echo "<li class='prijavaa'><a href='logout.php'>Log Out</a></li>";
                             
                         }

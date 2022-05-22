@@ -1,5 +1,5 @@
 <?php
-    session_start();
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -11,7 +11,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        <?php include 'profilAdmin.css' ?>
+        <?php include 'profilAdmin.css';
+        include 'config.php';  ?>
     </style>
 </head>
 
@@ -59,6 +60,39 @@
 
         <div class="content">
             <div class="levii">
+                <div class="default">
+                    <div class="slik">
+                        <img src="slike/default.jpg" style="width: 100%;height:100%;border-radius:50%">
+
+                    </div>
+                    <?php
+
+                    if (isset($_SESSION["userN"])) {
+                        echo "<p style='margin-top:10px; font-size:25px;'>" . $_SESSION["userN"] .  "</p>";
+                    }
+
+                    ?>
+
+                </div>
+
+                <div class="informacije">
+                    <a href='naslovna.php'>
+                        <div class="Zahtevi">
+                            <p>Zahtevi</p>
+                        </div>
+                    </a>
+                    <a href='naslovna.php'>
+                        <div class="DodajN">
+                            <p>Dodaj novost</p>
+                        </div>
+                    </a>
+                    <a href='naslovna.php'>
+                        <div class="dodajL">
+                            <p>Dodaj lekara</p>
+                        </div>
+                    </a>
+
+                </div>
 
 
 
@@ -68,9 +102,207 @@
             </div>
             <div class="desnii">
 
+                <div class="personal">
+                    <div class="licno">
+                        <p>Lični podaci</p>
+                    </div>
+                    <div class="podaci">
+                        <div class="podaciL">
+                            <p>Ime</p>
+                        </div>
+                        <div class="podaciD">
+                            <?php
+                            $oke = $_SESSION["userN"];
+                            $sql = "SELECT ime  FROM oke2 where usern= '$oke' ";
+                            $result = $conn->query($sql);
+
+                            while ($row = $result->fetch_assoc()) {
+                                echo "<p>" . $row["ime"] . "</p>";
+                            }
+                            ?>
+                        </div>
+
+                    </div>
+                    <div class="podaci">
+                        <div class="podaciL">
+                            <p>Prezime</p>
+                        </div>
+                        <div class="podaciD">
+                            <?php
+                            $oke = $_SESSION["userN"];
+                            $sql = "SELECT prezime  FROM oke2 where usern= '$oke' ";
+                            $result = $conn->query($sql);
+
+                            while ($row = $result->fetch_assoc()) {
+                                echo "<p>" . $row["prezime"] . "</p>";
+                            }
+                            ?>
+                        </div>
+
+                    </div>
+
+                    
+                    <div class="podaci">
+                        <div class="podaciL">
+                            <p>Username</p>
+                        </div>
+                        <div class="podaciD">
+                            <?php
+                            $oke = $_SESSION["userN"];
+                            $sql = "SELECT usern  FROM oke2 where usern= '$oke' ";
+                            $result = $conn->query($sql);
+
+                            while ($row = $result->fetch_assoc()) {
+                                echo "<p>" . $row["usern"] . "</p>";
+                            }
+                            ?>
+                        </div>
+
+                    </div>
+
+
+                    <div class="podaci">
+                        <div class="podaciL">
+                            <p>Mesto Rodjenja</p>
+                        </div>
+                        <div class="podaciD">
+                            <?php
+                            $oke = $_SESSION["userN"];
+                            $sql = "SELECT mestoRodjenja  FROM oke2 where usern= '$oke' ";
+                            $result = $conn->query($sql);
+
+                            while ($row = $result->fetch_assoc()) {
+                                echo "<p>" . $row["mestoRodjenja"] . "</p>";
+                            }
+                            ?>
+                        </div>
+
+                    </div>
+
+
+                    <div class="podaci">
+                        <div class="podaciL">
+                            <p>Drzava Rodjenja</p>
+                        </div>
+                        <div class="podaciD">
+                            <?php
+                            $oke = $_SESSION["userN"];
+                            $sql = "SELECT drzavaRodjenja  FROM oke2 where usern= '$oke' ";
+                            $result = $conn->query($sql);
+
+                            while ($row = $result->fetch_assoc()) {
+                                echo "<p>" . $row["drzavaRodjenja"] . "</p>";
+                            }
+                            ?>
+                        </div>
+
+                    </div>
+
+
+                    
+                    <div class="podaci">
+                        <div class="podaciL">
+                            <p>Pol</p>
+                        </div>
+                        <div class="podaciD">
+                            <?php
+                            $oke = $_SESSION["userN"];
+                            $sql = "SELECT pol  FROM oke2 where usern= '$oke' ";
+                            $result = $conn->query($sql);
+
+                            while ($row = $result->fetch_assoc()) {
+                                echo "<p>" . $row["pol"] . "</p>";
+                            }
+                            ?>
+                        </div>
+
+                    </div>
+
+                    
+                    <div class="podaci">
+                        <div class="podaciL">
+                            <p>Datum Rodjenja</p>
+                        </div>
+                        <div class="podaciD">
+                            <?php
+                            $oke = $_SESSION["userN"];
+                            $sql = "SELECT datumRodjenja  FROM oke2 where usern= '$oke' ";
+                            $result = $conn->query($sql);
+
+                            while ($row = $result->fetch_assoc()) {
+                                echo "<p>" . $row["datumRodjenja"] . "</p>";
+                            }
+                            ?>
+                        </div>
+
+                    </div>
+
+                    
+                    <div class="podaci">
+                        <div class="podaciL">
+                            <p>JMBG</p>
+                        </div>
+                        <div class="podaciD">
+                            <?php
+                            $oke = $_SESSION["userN"];
+                            $sql = "SELECT maticni  FROM oke2 where usern= '$oke' ";
+                            $result = $conn->query($sql);
+
+                            while ($row = $result->fetch_assoc()) {
+                                echo "<p>" . $row["maticni"] . "</p>";
+                            }
+                            ?>
+                        </div>
+
+                    </div>
+
+                    
+                    <div class="podaci">
+                        <div class="podaciL">
+                            <p>Broj Telefona</p>
+                        </div>
+                        <div class="podaciD">
+                            <?php
+                            $oke = $_SESSION["userN"];
+                            $sql = "SELECT brojTelefona  FROM oke2 where usern= '$oke' ";
+                            $result = $conn->query($sql);
+
+                            while ($row = $result->fetch_assoc()) {
+                                echo "<p>" . $row["brojTelefona"] . "</p>";
+                            }
+                            ?>
+                        </div>
+
+                    </div>
+
+                    
+                    <div class="podaci">
+                        <div class="podaciL">
+                            <p>Email</p>
+                        </div>
+                        <div class="podaciD">
+                            <?php
+                            $oke = $_SESSION["userN"];
+                            $sql = "SELECT mejl  FROM oke2 where usern= '$oke' ";
+                            $result = $conn->query($sql);
+
+                            while ($row = $result->fetch_assoc()) {
+                                echo "<p>" . $row["mejl"] . "</p>";
+                            }
+                            ?>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+
+
             </div>
 
-            
+
 
 
 
@@ -97,7 +329,7 @@
 
 
 
-        
+
         <div class="footer">
 
 
@@ -106,46 +338,46 @@
 
 
 
-<div class="medi">
-    <h2 style="font-family: sans-serif;color: white">MediHelp</h2>
-    <a>Relje Krilatice,28</a>
-    <a>36300 Novi Pazar</a>
-    <a>Tel/faks: 011 367 222</a>
-    <a>Mobilni: 065 433 95 04</a>
-    <a>E-mail: miljancosovicnp@gmail.com</a>
-</div>
+            <div class="medi">
+                <h2 style="font-family: sans-serif;color: white">MediHelp</h2>
+                <a>Relje Krilatice,28</a>
+                <a>36300 Novi Pazar</a>
+                <a>Tel/faks: 011 367 222</a>
+                <a>Mobilni: 065 433 95 04</a>
+                <a>E-mail: miljancosovicnp@gmail.com</a>
+            </div>
 
-<div class="nav">
-    <h2 style="font-family: sans-serif;color: white">Navigacija</h2>
-    <a>> Naslovna</a>
-    <a>> Simptomi</a>
-    <a>> Usluge</a>
-    <a>> Osoblje</a>
-    <a>> Kontakt</a>
+            <div class="nav">
+                <h2 style="font-family: sans-serif;color: white">Navigacija</h2>
+                <a>> Naslovna</a>
+                <a>> Simptomi</a>
+                <a>> Usluge</a>
+                <a>> Osoblje</a>
+                <a>> Kontakt</a>
 
-</div>
+            </div>
 
-<div class="radno">
-    <h2 style="font-family: sans-serif;color: white">Radno vreme</h2>
-    <a>Radnim danom: 08:00 - 21:00 h</a>
-    <a>Subotom: 08:00 - 15:00 h</a>
-    <a>Nedeljom ne radimo</a>
+            <div class="radno">
+                <h2 style="font-family: sans-serif;color: white">Radno vreme</h2>
+                <a>Radnim danom: 08:00 - 21:00 h</a>
+                <a>Subotom: 08:00 - 15:00 h</a>
+                <a>Nedeljom ne radimo</a>
 
-</div>
+            </div>
 
-<div class="wrapper">
-    <a href=""><span>Kontakt</span></a>
-</div>
-
-
+            <div class="wrapper">
+                <a href=""><span>Kontakt</span></a>
+            </div>
 
 
 
-</div>
 
-<div class="footer2">
-<p>© 2022, Neurologija MediHelp | Novi Pazar</p>
-</div>
+
+        </div>
+
+        <div class="footer2">
+            <p>© 2022, Neurologija MediHelp | Novi Pazar</p>
+        </div>
 
 
 

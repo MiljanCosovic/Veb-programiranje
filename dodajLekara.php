@@ -28,7 +28,7 @@ session_start();
                 <div class="menu">
                     <ul>
                         <li class="naslovna"><a href="naslovna.php">Početna</a></li>
-                        <li class="usluge"><a href="">Novosti</a></li>
+                        <li class="usluge"><a href="novosti.php">Novosti</a></li>
                         <li class="simptomi"><a href="simptomi.php">Simptomi</a></li>
                         <li class="osoblje"><a href="">Osoblje</a></li>
                         <li class="contact"><a href="kontakt.php">Kontak</a></li>
@@ -82,17 +82,17 @@ session_start();
                 </div>
 
                 <div class="informacije">
-                    <a href='naslovna.php'>
+                    <a href='zahtevi.php'>
                         <div class="Zahtevi">
                             <p>Zahtevi</p>
                         </div>
                     </a>
-                    <a href='naslovna.php'>
+                    <a href='dodajNovostA.php'>
                         <div class="DodajN">
                             <p>Dodaj novost</p>
                         </div>
                     </a>
-                    <a href='naslovna.php'>
+                    <a href='dodajLekara.php'>
                         <div id='activee' class="dodajL">
                             <p>Dodaj lekara</p>
                         </div>

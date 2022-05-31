@@ -30,7 +30,7 @@ session_start();
                         <li class="naslovna"><a href="naslovna.php">Početna</a></li>
                         <li class="usluge"><a href="novosti.php">Novosti</a></li>
                         <li class="simptomi"><a href="simptomi.php">Simptomi</a></li>
-                        <li class="osoblje"><a href="">Osoblje</a></li>
+                        <li class="osoblje"><a href="osoblje.php">Osoblje</a></li>
                         <li class="contact"><a href="kontakt.php">Kontak</a></li>
 
 
@@ -63,7 +63,15 @@ session_start();
             <div class="levii">
                 <div class="default">
                     <div class="slik">
-                        <img src="slike/default.jpg" style="width: 100%;height:100%;border-radius:50%">
+                    <?php 
+                            $oke = $_SESSION["userN"];
+                            $sql = "SELECT slika  FROM oke2 where usern= '$oke' ";
+                            $result = $conn->query($sql);
+        
+                            while ($row = $result->fetch_assoc()) {
+                                echo " <img style='width:100%; height:100%; border-radius:50%;' src='".$row["slika"]."'>";
+                            }
+                    ?>
 
                     </div>
                     <?php

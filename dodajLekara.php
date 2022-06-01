@@ -106,6 +106,24 @@ session_start();
                         </div>
                     </a>
 
+                    <a href='prikazLekara.php'>
+                        <div class="dodajL">
+                            <p>Prikaz Lekara</p>
+                        </div>
+                    </a>
+
+                    <a href='prikazPacijenata.php'>
+                        <div class="dodajL">
+                            <p>Prikaz Pacijenata</p>
+                        </div>
+                    </a>
+
+                    <a href='promenaSifre.php'>
+                        <div class="dodajL">
+                            <p>Promena sifre</p>
+                        </div>
+                    </a>
+
                 </div>
             </div>
 
@@ -179,10 +197,10 @@ session_start();
                                     <div class="Pol2">
                                         <div class="pol">
                                             <div class="Muski">
-                                                <p>Muski:</p><input style="height:17px; width:17px;" type="radio" name="pol" value="m">
+                                                <p>Muski:</p><input style="height:17px; width:17px;" type="radio" name="pol" value="muski">
                                             </div>
                                             <div class="Zenski">
-                                                <p>Zenski:</p><input style="height:17px; width:17px;" type="radio" name="pol" value="z">
+                                                <p>Zenski:</p><input style="height:17px; width:17px;" type="radio" name="pol" value="zenski">
                                             </div>
                                         </div>
                                     </div>

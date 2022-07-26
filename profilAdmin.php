@@ -29,9 +29,9 @@ session_start();
                 <div class="menu">
                     <ul>
                         <li class="naslovna"><a href="naslovna.php">Početna</a></li>
-                        <li class="usluge"><a href="">Novosti</a></li>
+                        <li class="usluge"><a href="novosti.php">Novosti</a></li>
                         <li class="simptomi"><a href="simptomi.php">Simptomi</a></li>
-                        <li class="osoblje"><a href="">Osoblje</a></li>
+                        <li class="osoblje"><a href="osoblje.php">Osoblje</a></li>
                         <li class="contact"><a href="kontakt.php">Kontak</a></li>
 
 
@@ -62,14 +62,26 @@ session_start();
             <div class="levii">
                 <div class="default">
                     <div class="slik">
-                        <img src="slike/default.jpg" style="width: 100%;height:100%;border-radius:50%">
+                    <?php
+                        $oke = $_SESSION["userN"];
+                        $sql = "SELECT slika  FROM oke2 where usern= '$oke' ";
+                        $result = $conn->query($sql);
 
+                        while ($row = $result->fetch_assoc()) {
+                            echo " <img style='width:100%; height:100%; border-radius:50%;' src='" . $row["slika"] . "'>";
+                        }
+                        ?>
                     </div>
                     <?php
+                    $oke = $_SESSION["userN"];
+                    $sql = "SELECT ime,prezime  FROM oke2 where usern= '$oke' ";
+                    $result = $conn->query($sql);
 
-                    if (isset($_SESSION["userN"])) {
-                        echo "<p style='margin-top:10px; font-size:25px;'>" . $_SESSION["userN"] .  "</p>";
+                    while ($row = $result->fetch_assoc()) {
+                        echo "<p style='margin-top:10px; font-size:25px;'>" . $row["ime"] . " " . $row["prezime"] . "</p>";
                     }
+
+
 
                     ?>
 
@@ -81,14 +93,37 @@ session_start();
                             <p>Zahtevi</p>
                         </div>
                     </a>
-                    <a href='naslovna.php'>
+                    <a href='dodajRaspored.php'>
+                        <div class="dodajL">
+                            <p>Dodaj raspored</p>
+                        </div>
+                    </a>
+                    <a href='dodajNovostA.php'>
                         <div class="DodajN">
                             <p>Dodaj novost</p>
                         </div>
                     </a>
-                    <a href='naslovna.php'>
+                    <a href='dodajLekara.php'>
                         <div class="dodajL">
                             <p>Dodaj lekara</p>
+                        </div>
+                    </a>
+
+                    <a href='prikazLekara.php'>
+                        <div class="dodajL">
+                            <p>Prikaz Lekara</p>
+                        </div>
+                    </a>
+
+                    <a href='prikazPacijenata.php'>
+                        <div class="dodajL">
+                            <p>Prikaz Pacijenata</p>
+                        </div>
+                    </a>
+
+                    <a href='promenaSifre.php'>
+                        <div class="dodajL">
+                            <p>Promena sifre</p>
                         </div>
                     </a>
 
@@ -104,7 +139,7 @@ session_start();
 
                 <div class="personal">
                     <div class="licno">
-                        <p>Lični podaci</p>
+                        <p>Licni podaci</p>
                     </div>
                     <div class="podaci">
                         <div class="podaciL">
@@ -141,7 +176,7 @@ session_start();
 
                     </div>
 
-                    
+
                     <div class="podaci">
                         <div class="podaciL">
                             <p>Username</p>
@@ -199,7 +234,7 @@ session_start();
                     </div>
 
 
-                    
+
                     <div class="podaci">
                         <div class="podaciL">
                             <p>Pol</p>
@@ -218,7 +253,7 @@ session_start();
 
                     </div>
 
-                    
+
                     <div class="podaci">
                         <div class="podaciL">
                             <p>Datum Rodjenja</p>
@@ -237,7 +272,7 @@ session_start();
 
                     </div>
 
-                    
+
                     <div class="podaci">
                         <div class="podaciL">
                             <p>JMBG</p>
@@ -256,7 +291,7 @@ session_start();
 
                     </div>
 
-                    
+
                     <div class="podaci">
                         <div class="podaciL">
                             <p>Broj Telefona</p>
@@ -275,7 +310,7 @@ session_start();
 
                     </div>
 
-                    
+
                     <div class="podaci">
                         <div class="podaciL">
                             <p>Email</p>

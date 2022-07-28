@@ -11,11 +11,13 @@ if(isset($_POST["submit"])){
     $datumRodjenja = $_POST['datumRodjenja'];
     $maticni = $_POST['maticni'];
     $brojTelefona = $_POST['brojTelefona'];
+    $lekar = $_POST['lekar'];
     $email = $_POST['email'];
     $usernameeee = $_POST['usernameeee'];
     $lozinka = $_POST['lozinka'];
     $potvrdaLozinke = $_POST['potvrdaLozinke'];
     $tip = "pacijent";
+    $slika="https://thumbs.dreamstime.com/b/default-avatar-profile-image-vector-social-media-user-icon-potrait-182347582.jpg";
 
 
     include "config.php";
@@ -50,7 +52,7 @@ if(isset($_POST["submit"])){
     }
 
 
-    createUser($conn,$ime, $prezime, $mestoRodjenja, $drzavaRodjenja, $pol,  $datumRodjenja,  $maticni, $brojTelefona,   $email, $usernameeee,  $lozinka, $tip);    
+    createUser($conn,$ime, $prezime, $mestoRodjenja, $drzavaRodjenja, $pol,  $datumRodjenja,  $maticni, $brojTelefona,   $email, $usernameeee,  $lozinka, $tip,$slika,$lekar);    
     
 }
 else

@@ -1,0 +1,526 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(247, 239, 239);
+}
+#hamburger{
+    padding-right: 15px;
+    display: none;
+    
+}
+#check{
+    display: none;
+}
+.navbar{
+    height: 90px;
+    width: 100%;
+    background-color: rgb(247, 239, 239);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 50px 0 50px ;
+    box-shadow: 2px 10px 50px gray ;
+    position: fixed;
+    z-index: 5;
+    margin-top: -71px;
+}
+.logo-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 45px;
+}
+.container{padding-top: 71px;}
+.menu{
+    display: flex;
+    align-items: center;
+}
+.menu ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.menu ul li{
+    margin-right: 20px;
+    list-style-type: none;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+.menu ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+#naslovna a{
+    background-color: #74737A;
+    color: white;
+    border-radius: 20px;
+}
+
+.naslovna a:hover{
+    background-color: #74737A;
+    color: white;
+    border-radius: 20px;
+    transition: 0.2s;
+
+}
+#active a{
+    background-color: #74737A;
+    color: white;
+    border-radius: 20px;
+}
+.naslovna a{
+    padding: 10px;
+}
+.usluge a:hover{
+    background-color: #74737A;
+    color: white;
+    border-radius: 20px;
+    transition: 0.2s;
+
+}
+.usluge a{
+    padding: 10px;
+}
+.simptomi a:hover{
+    background-color: #74737A;
+    color: white;
+    border-radius: 20px;
+    transition: 0.2s;
+
+}
+.simptomi a{
+    padding: 10px;
+}
+.osoblje a:hover{
+    background-color:#74737A;
+    color: white;
+    border-radius: 20px;
+    transition: 0.2s;
+
+}
+.osoblje a{
+    padding: 10px;
+}
+.contact a:hover{
+    background-color: #74737A;
+    color: white;
+    border-radius: 20px;
+    transition: 0.2s;
+
+}
+.contact     a{
+    padding: 10px;
+}
+.prijavaa a:hover{
+    background-color: #74737A;
+    color: white;
+    border-radius: 20px;
+    transition: 0.2s;
+
+}
+.prijavaa     a{
+    padding: 10px;
+}
+.logo-image{
+    height: 100%;
+}
+.logo{
+    height: 100% !important;
+    padding: 10px;
+}
+
+.content
+{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 91.5vh;
+}
+.levii{
+    border: 1px solid black;
+    width: 30%;
+    height: auto!important;
+    background-color:#00a5e3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.default{
+    width: 100%;
+    height: 500px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.slik{
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    background-color: gray;
+}
+.informacije{
+    width: 85%;
+    background-color: gray;
+    
+    height: auto;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+}
+.informacije p{
+    margin-left: 5px;
+}
+.informacije :hover{
+    background-color: #1f242d;
+    color: white;
+}
+.informacije a{
+    text-decoration: none;
+    color: black;
+}
+.Zahtevi{
+    width: 100%;
+    height: 50px;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    
+
+}
+.DodajN{
+    width: 100%;
+    height: 50px;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+}
+.dodajL{
+    width: 100%;
+    height: 50px;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    
+}
+.desnii{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.personal{
+    width: 80%;
+    height: 80%;
+    background-color: white;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+.licno
+{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.podaci{
+   width: 100%;
+   height: 50px;
+   border-bottom: 1px solid lightgray;
+   display: flex;
+   flex-direction: row; 
+   margin-top: 10px;
+}
+.podaciL{
+    width: 45%;
+    height: 100%;
+    display:flex;
+    align-items: center;
+    font-size: 28px;
+}
+.podaciL p{
+    margin-left: 10px;
+}
+.podaciD{
+    width: 55%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    color: rgb(87, 86, 86);
+}
+#activee{
+    
+    background-color: #1f242d;
+    color: white;
+    
+}
+
+
+
+
+.dContent{
+    background-color: white;
+    width: 70%;
+    height: 83%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    align-items: center;
+    border-radius: 5px;
+}
+.desnii{
+    
+    width: 70%;
+    min-height: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.teksst{
+    font-size: 40px;
+    margin-top: 100px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    color: black;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.adr{
+    font-size: 25px;
+    margin-top: 20px;
+}
+.ad{
+    width: 300px;
+    height: 50px;
+    margin-top: 15px;
+}
+.adre{
+    font-size: 25px;
+    margin-top: 15px;
+}
+.add{
+    width: 300px;
+    height: 90px;
+    margin-top: 15px;
+}
+
+.dugme{
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+    height:30px;
+    margin-top: 20px;
+    
+}
+.btn{
+width: 100%;
+background-color: #f5ba1a;
+text-align: center;
+color: white;
+border: none;
+cursor: pointer;
+font-size: 18px;
+}
+.btn:hover{
+background-color: #e1a70a;
+}
+
+
+.cek{
+    width: 300px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 18px;
+}
+.cek p{
+    margin-left: 4px;
+}
+.successmessage {
+    padding: 10px 12px;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+    background-color: #d4edda;
+    margin-bottom: 10px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.wrapper{
+    margin-top: 40px;
+}
+.wrapper a{
+    margin-top: 10px;
+    display: block;
+    width: 250px;
+    height: 44px;
+    line-height: 40px;
+    font-size: 18px !important;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    border: none;
+    background-color:#318CCA;
+    letter-spacing: 2px;
+    text-align: center;
+    position: relative;
+    transition: all .35s;
+    margin-left: 15px;
+    font-size: 14px;
+  }
+  
+  .wrapper a span{
+    position: relative;
+    z-index: 2;
+  }
+  
+  .wrapper  a:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgb(133, 132, 132);
+    border:none;
+    transition: all .35s;
+  }
+  
+  .wrapper a:hover{
+    color: black;
+  }
+  
+  .wrapper a:hover:after{
+    width: 100%;
+  }
+
+
+
+
+
+.footer{
+    width: 100%;
+    height: 300px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #1f242d;
+}
+.medi{
+    padding-top: 40px;
+    height: 200px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+}
+.medi a{
+    color: white;
+    font-size: 20px;
+}
+
+.nav{
+    padding-top: 40px;
+    height: 200px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+}
+.nav a{
+    color: white;
+    font-size: 20px;
+}
+
+.radno{
+    padding-top: 40px;
+    height: 200px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 15px;
+}
+.radno a{
+    color: white;
+    font-size: 20px;
+}
+
+
+
+
+.footer2{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #bbb;
+}
+.footer2 p{
+    font-size: 17px;
+}

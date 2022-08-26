@@ -9,7 +9,7 @@ session_start();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MediHelp</title>
     <style>
         <?php include 'profilAdmin.css';
         include 'config.php';  ?>
@@ -37,13 +37,13 @@ session_start();
 
                         <?php
                         if (isset($_SESSION["userN"]) && ($_SESSION["TipU"]) == "lekar") {
-                            echo "<li class='prijavaa'><a href='profilLekar.php'>ProfilLekar</a></li>";
+                            echo "<li class='prijavaa'><a href='profilLekar.php'>Profil</a></li>";
                             echo "<li class='prijavaa' ><a href='logout.php'>Log Out</a></li>";
                         } else if (isset($_SESSION["userN"]) && ($_SESSION["TipU"]) == "admin") {
-                            echo "<li class='prijavaa' id='active'><a href='profilAdmin.php'>ProfilAdmin</a></li>";
+                            echo "<li class='prijavaa' id='active'><a href='profilAdmin.php'>Profil</a></li>";
                             echo "<li class='prijavaa'><a href='logout.php'>Log Out</a></li>";
                         } else if (isset($_SESSION["userN"]) && ($_SESSION["TipU"]) == "pacijent") {
-                            echo "<li class='prijavaa'><a href='profilPacijent.php'>ProfilPacinent</a></li>";
+                            echo "<li class='prijavaa'><a href='profilPacijent.php'>Profil</a></li>";
                             echo "<li class='prijavaa'><a href='logout.php'>Log Out</a></li>";
                         } else {
                             echo "<li class='prijavaa'><a href='login.php'>Prijavi se</a></li>";
@@ -88,7 +88,7 @@ session_start();
                 </div>
 
                 <div class="informacije">
-                    <a href='naslovna.php'>
+                    <a href='zahtevi.php'>
                         <div class="Zahtevi">
                             <p>Zahtevi</p>
                         </div>
@@ -118,6 +118,11 @@ session_start();
                     <a href='prikazPacijenata.php'>
                         <div class="dodajL">
                             <p>Prikaz Pacijenata</p>
+                        </div>
+                    </a>
+                    <a href='promenaSlikeA.php'>
+                        <div class="dodajL">
+                            <p>Promena profilne fotografije</p>
                         </div>
                     </a>
 
@@ -384,11 +389,11 @@ session_start();
 
             <div class="nav">
                 <h2 style="font-family: sans-serif;color: white">Navigacija</h2>
-                <a>> Naslovna</a>
-                <a>> Simptomi</a>
-                <a>> Usluge</a>
-                <a>> Osoblje</a>
-                <a>> Kontakt</a>
+                <a href="naslovna.php">> Pocetna</a>
+                <a href="novosti.php">> Novosti</a>
+                <a href="simptomi.php">> Simptomi</a>
+                <a href="osoblje.php">> Osoblje</a>
+                <a href="kontakt.php">> Kontakt</a>
 
             </div>
 
@@ -401,7 +406,7 @@ session_start();
             </div>
 
             <div class="wrapper">
-                <a href=""><span>Kontakt</span></a>
+                <a href="kontakt.php"><span>Kontakt</span></a>
             </div>
 
 

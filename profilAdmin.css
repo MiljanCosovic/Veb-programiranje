@@ -173,6 +173,7 @@ body{
     display: flex;
     flex-direction: column;
     font-size: 20px;
+    margin-bottom: 30px;
 }
 .informacije p{
     margin-left: 5px;
@@ -393,6 +394,10 @@ body{
 .nav a{
     color: white;
     font-size: 20px;
+    text-decoration: none;
+}
+.nav a:hover{
+    color: #cccccc;
 }
 
 .radno{

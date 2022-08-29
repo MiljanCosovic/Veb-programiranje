@@ -112,6 +112,7 @@ body{
     transition: 0.2s;
 
 }
+
 .contact     a{
     padding: 10px;
 }
@@ -167,9 +168,9 @@ body{
 .informacije{
     width: 85%;
     background-color: gray;
-    
+    margin-bottom: 30px;
     height: auto;
-    margin-top: 90px;
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     font-size: 20px;
@@ -216,7 +217,6 @@ body{
     
 }
 .desnii{
-    border: 1px solid black;
     width: 70%;
     height: 100%;
     display: flex;
@@ -226,9 +226,10 @@ body{
 .dContent{
     background-color: white;
     width: 70%;
-    height: 83%;
+    height: 86%;
     display: flex;
     flex-direction: column;
+    border-radius: 5px;
 }
 .DodajLek{
     width: 100%;
@@ -245,9 +246,16 @@ body{
     flex-direction: row;
     justify-content: center;
 }
+.sve{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 form{
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 .rr{
     display: flex;
@@ -394,6 +402,7 @@ form{
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 
@@ -403,6 +412,7 @@ form{
     flex-direction: row;
     width: 200px;
     height:30px;
+    margin-bottom: 25px;
     
 }
 .btn{
@@ -532,6 +542,9 @@ background-color: #e1a70a;
 .nav a{
     color: white;
     font-size: 20px;
+    text-decoration: none;
+}.nav a:hover{
+    color: #cccccc;
 }
 
 .radno{
